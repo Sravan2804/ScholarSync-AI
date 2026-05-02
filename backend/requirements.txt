@@ -1,0 +1,12 @@
+fastapi>=0.110.0
+uvicorn>=0.27.1
+pydantic>=2.9.0
+langgraph>=0.0.30
+langchain>=0.1.13
+langchain-core>=0.1.40
+langchain-openai>=0.1.1 # for DeepSeek or OpenAI compatibility
+langchain-groq>=0.1.0 # for Llama 3.1 70B/405B via Groq
+langchain-google-genai>=1.0.1 # for Gemini 1.5 Pro
+tavily-python>=0.3.3
+supabase>=2.4.1
+python-dotenv>=1.0.1
