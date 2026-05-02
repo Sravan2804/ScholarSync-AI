@@ -7,7 +7,10 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from tavily import TavilyClient
 from dotenv import load_dotenv
 
-load_dotenv()
+# Explicitly load from backend/.env regardless of where uvicorn is run
+current_dir = os.path.dirname(os.path.abspath(__file__))
+env_path = os.path.join(current_dir, ".env")
+load_dotenv(dotenv_path=env_path)
 
 # Define the State for LangGraph
 class AgentState(TypedDict):
