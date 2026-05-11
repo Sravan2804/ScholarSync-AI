@@ -24,19 +24,24 @@ class AgentState(TypedDict):
 
 class ResearchAgentManager:
     def __init__(self):
-        # Initialize LLMs
+        # Initialize LLMs via OpenRouter
         self.planner_llm = ChatOpenAI(
-            model="deepseek-chat", 
-            api_key=os.getenv("DEEPSEEK_API_KEY"), 
-            base_url="https://api.deepseek.com/v1"
+            model="deepseek/deepseek-r1-0528", 
+            api_key=os.getenv("OPENROUTER_DEEPSEEK_KEY"), 
+            base_url="https://openrouter.ai/api/v1",
+            max_tokens=2048
         )
-        self.research_llm = ChatGroq(
-            model_name="llama3-70b-8192", 
-            groq_api_key=os.getenv("GROQ_API_KEY")
+        self.research_llm = ChatOpenAI(
+            model="meta-llama/llama-4-scout", 
+            api_key=os.getenv("OPENROUTER_LLAMA_KEY"),
+            base_url="https://openrouter.ai/api/v1",
+            max_tokens=4096
         )
-        self.synthesis_llm = ChatGoogleGenerativeAI(
-            model="gemini-1.5-pro", 
-            google_api_key=os.getenv("GOOGLE_API_KEY")
+        self.synthesis_llm = ChatOpenAI(
+            model="meta-llama/llama-4-scout", 
+            api_key=os.getenv("OPENROUTER_GEMMA_KEY"), # Reusing this key or OPENROUTER_LLAMA_KEY
+            base_url="https://openrouter.ai/api/v1",
+            max_tokens=4096
         )
         self.tavily = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
 
