@@ -311,12 +311,12 @@ export default function Home() {
                       className="font-josefin tracking-wide"
                       dangerouslySetInnerHTML={{ 
                         __html: result.outline
-                          .replace(/^\s*# (.*$)/gim, '<h1 class="text-4xl lg:text-5xl mb-6 text-white font-josefin tracking-tight mt-6">$1</h1>')
-                          .replace(/^\s*## (.*$)/gim, '<h2 class="text-3xl mt-10 mb-4 text-indigo-100 font-josefin">$1</h2>')
-                          .replace(/^\s*### (.*$)/gim, '<h3 class="text-2xl mt-8 mb-3 text-sky-200 font-sans font-semibold">$1</h3>')
+                          .replace(/^\s*# (.*$)/gim, '<h1 class="text-4xl lg:text-5xl mb-2 text-white font-josefin tracking-tight">$1</h1>')
+                          .replace(/^\s*## (.*$)/gim, '<h2 class="text-3xl mb-2 text-indigo-100 font-josefin">$1</h2>')
+                          .replace(/^\s*### (.*$)/gim, '<h3 class="text-2xl mb-2 text-sky-200 font-sans font-semibold">$1</h3>')
                           .replace(/\*\*(.*?)\*\*/g, '<strong class="text-sky-300 font-bold">$1</strong>')
-                          .replace(/[=-]{3,}/g, '<hr class="border-white/10 my-6"/>')
-                          .replace(/\n{3,}/g, '\n\n')
+                          .replace(/[=-]{3,}/g, '<hr class="border-white/10 my-2"/>')
+                          .replace(/\n{2,}/g, '\n') 
                           .replace(/\n/g, '<br/>') 
                       }} 
                     />
