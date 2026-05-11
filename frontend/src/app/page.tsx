@@ -249,19 +249,22 @@ export default function Home() {
                     <span className="text-xs font-bold bg-white/10 text-white px-3 py-1 rounded-full">{result.links.length}</span>
                   </div>
                   
-                  <div className="space-y-6 max-h-[800px] overflow-y-auto pr-4 custom-scrollbar">
+                  <div className="space-y-8 max-h-[800px] overflow-y-auto pr-4 custom-scrollbar">
                     {result.links.map((link: any, idx: number) => (
                       <motion.div key={link.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }} className="group">
-                        <div className="p-5 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all">
-                          <h4 className="text-base font-bold text-white leading-snug mb-3">
+                        <div className="p-6 rounded-3xl bg-white/[0.03] border border-transparent hover:bg-white/[0.06] hover:border-white/10 transition-all">
+                          <h4 className="text-lg font-bold text-white leading-snug mb-4 font-josefin tracking-tight">
                             {link.title}
                           </h4>
-                          <p className="text-sm text-slate-400 italic line-clamp-3 mb-5 leading-relaxed">
+                          <p className="text-[15px] text-slate-400 font-light line-clamp-4 mb-6 leading-relaxed">
                             "{link.snippet}"
                           </p>
-                          <div className="flex items-center justify-between mt-auto">
-                            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">{link.domain}</span>
-                            <a href={link.url} target="_blank" className="text-sky-400 hover:text-sky-300 transition-colors flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest">
+                          <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
+                            <div className="flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
+                              <span className="text-xs font-semibold text-slate-400 uppercase tracking-widest">{link.domain}</span>
+                            </div>
+                            <a href={link.url} target="_blank" className="text-sky-400 hover:text-sky-300 transition-colors flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest bg-sky-500/10 px-3 py-1.5 rounded-full">
                               Source <ExternalLink className="w-3.5 h-3.5" />
                             </a>
                           </div>
@@ -299,18 +302,21 @@ export default function Home() {
                   
                   {/* Formatted Markdown Content */}
                   <article className="prose prose-invert prose-lg max-w-none 
-                    prose-p:text-slate-300 prose-p:leading-relaxed 
+                    prose-p:text-slate-300 prose-p:leading-relaxed prose-p:font-light
                     prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight 
                     prose-strong:text-sky-300 prose-strong:font-bold
                     prose-a:text-sky-400 hover:prose-a:text-sky-300
                     prose-ul:text-slate-300 prose-li:marker:text-sky-500">
                     <div 
-                      className="font-serif"
+                      className="font-josefin tracking-wide"
                       dangerouslySetInnerHTML={{ 
                         __html: result.outline
-                          .replace(/^# (.*$)/gim, '<h1 class="text-4xl lg:text-5xl mb-10 text-white font-serif italic">$1</h1>')
-                          .replace(/^## (.*$)/gim, '<h2 class="text-3xl mt-16 mb-6 text-indigo-100 font-serif">$1</h2>')
-                          .replace(/^### (.*$)/gim, '<h3 class="text-2xl mt-10 mb-4 text-sky-200 font-sans font-semibold">$1</h3>')
+                          .replace(/^\s*# (.*$)/gim, '<h1 class="text-4xl lg:text-5xl mb-6 text-white font-josefin tracking-tight mt-6">$1</h1>')
+                          .replace(/^\s*## (.*$)/gim, '<h2 class="text-3xl mt-10 mb-4 text-indigo-100 font-josefin">$1</h2>')
+                          .replace(/^\s*### (.*$)/gim, '<h3 class="text-2xl mt-8 mb-3 text-sky-200 font-sans font-semibold">$1</h3>')
+                          .replace(/\*\*(.*?)\*\*/g, '<strong class="text-sky-300 font-bold">$1</strong>')
+                          .replace(/[=-]{3,}/g, '<hr class="border-white/10 my-6"/>')
+                          .replace(/\n{3,}/g, '\n\n')
                           .replace(/\n/g, '<br/>') 
                       }} 
                     />
