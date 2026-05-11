@@ -26,6 +26,9 @@ ScholarSync utilizes a sophisticated **Multi-Agentic RAG (Retrieval-Augmented Ge
 - **Source Mapping Matrix**: Dynamic mapping of every section of the research blueprint to its corresponding verified data nodes.
 - **Multi-LLM Backbone**: Leverages state-of-the-art models including **DeepSeek-V3**, **LLaMA 3.1**, and **Google Gemini** via OpenRouter.
 
+<img width="1920" height="4018" alt="screencapture-localhost-3000-2026-05-11-18_17_33" src="https://github.com/user-attachments/assets/df10f5e7-43c0-4c40-9f5d-1acd3f83a533" />
+
+
 ## 🛠️ Tech Stack
 
 ### Frontend
