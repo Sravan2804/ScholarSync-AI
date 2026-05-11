@@ -7,6 +7,8 @@
 
 **ScholarSync AI** is a high-performance research orchestration platform that deploys a decentralized swarm of specialized AI agents to automate the academic research lifecycle. From strategic planning and global data scouting to authority validation and cognitive synthesis, ScholarSync transforms complex inquiries into structured, peer-validated research blueprints.
 
+<img width="1898" height="947" alt="image" src="https://github.com/user-attachments/assets/78d0cfd8-1311-4821-8652-1087c24d5738" />
+
 ## 🔬 Core Architecture: The Research Swarm
 
 ScholarSync utilizes a sophisticated **Multi-Agentic RAG (Retrieval-Augmented Generation)** architecture powered by **LangGraph**. The workflow is decomposed into four specialized cognitive nodes:
