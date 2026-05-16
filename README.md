@@ -7,14 +7,32 @@
 
 **ScholarSync AI** is a high-performance research orchestration platform that deploys a decentralized swarm of specialized AI agents to automate the academic research lifecycle. From strategic planning and global data scouting to authority validation and cognitive synthesis, ScholarSync transforms complex inquiries into structured, peer-validated research blueprints.
 
+## 🔄 Agentic Workflow
+
+ScholarSync AI employs a strictly sequenced multi-agent orchestration pipeline. Each agent is specialized for a specific phase of the research lifecycle, ensuring high-fidelity outputs and peer-validated accuracy.
+
+```mermaid
+graph LR
+    User([User Assignment]) --> Planner{{Strategic Planner}}
+    Planner -- "4 Academic Pillars" --> Scout{{Global Data Scout}}
+    Scout -- "Raw Data Stream" --> Validator{{Authority Validator}}
+    Validator -- "Verified Nodes" --> Synthesizer{{Blueprint Synthesizer}}
+    Synthesizer --> Output([Research Blueprint])
+
+    style Planner fill:#6366f1,stroke:#fff,stroke-width:2px,color:#fff
+    style Scout fill:#8b5cf6,stroke:#fff,stroke-width:2px,color:#fff
+    style Validator fill:#ec4899,stroke:#fff,stroke-width:2px,color:#fff
+    style Synthesizer fill:#06b6d4,stroke:#fff,stroke-width:2px,color:#fff
+```
+
 ## 🔬 Core Architecture: The Research Swarm
 
 ScholarSync utilizes a sophisticated **Multi-Agentic RAG (Retrieval-Augmented Generation)** architecture powered by **LangGraph**. The workflow is decomposed into four specialized cognitive nodes:
 
-1.  **Strategic Planner**: Decomposes complex research objectives into core pillars and investigative queries.
-2.  **Global Data Scout**: Executes deep-web searches across academic nodes and indexed repositories using the **Tavily API**.
-3.  **Authority Validator**: Performs domain credibility checks and source reputation analysis to ensure academic integrity.
-4.  **Blueprint Synthesizer**: Aggregates validated intelligence into a comprehensive, formatted research manuscript.
+1.  **Strategic Planner (DeepSeek R1)**: Decomposes complex research objectives into 4 distinct academic research pillars and investigative queries.
+2.  **Global Data Scout (Llama 4 Scout)**: Executes deep-web searches across academic nodes and indexed repositories using the **Tavily API**.
+3.  **Authority Validator (Logic-Driven)**: Performs domain credibility checks (filtering for .edu, .gov, arxiv.org, etc.) and source reputation analysis.
+4.  **Blueprint Synthesizer (Llama 4 Scout)**: Aggregates validated intelligence into a comprehensive, formatted research manuscript with automated citation mapping.
 
 ## ✨ Key Features
 
