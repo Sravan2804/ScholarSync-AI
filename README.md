@@ -7,6 +7,7 @@
 
 **ScholarSync AI** is a high-performance research orchestration platform that deploys a decentralized swarm of specialized AI agents to automate the academic research lifecycle. From strategic planning and global data scouting to authority validation and cognitive synthesis, ScholarSync transforms complex inquiries into structured, peer-validated research blueprints.
 
+<<<<<<< HEAD
 ## 🔄 Agentic Workflow
 
 ScholarSync AI employs a strictly sequenced multi-agent orchestration pipeline. Each agent is specialized for a specific phase of the research lifecycle, ensuring high-fidelity outputs and peer-validated accuracy.
@@ -24,6 +25,9 @@ graph LR
     style Validator fill:#ec4899,stroke:#fff,stroke-width:2px,color:#fff
     style Synthesizer fill:#06b6d4,stroke:#fff,stroke-width:2px,color:#fff
 ```
+=======
+<img width="1898" height="947" alt="image" src="https://github.com/user-attachments/assets/78d0cfd8-1311-4821-8652-1087c24d5738" />
+>>>>>>> 884c3e9c8eb293dfbc90c713b631cc7d195c1fe4
 
 ## 🔬 Core Architecture: The Research Swarm
 
@@ -41,6 +45,9 @@ ScholarSync utilizes a sophisticated **Multi-Agentic RAG (Retrieval-Augmented Ge
 - **Contradiction Analysis Mode**: A specialized toggle that instructs agents to actively seek out dissenting opinions and peer-reviewed counter-arguments.
 - **Source Mapping Matrix**: Dynamic mapping of every section of the research blueprint to its corresponding verified data nodes.
 - **Multi-LLM Backbone**: Leverages state-of-the-art models including **DeepSeek-V3**, **LLaMA 3.1**, and **Google Gemini** via OpenRouter.
+
+<img width="1920" height="4018" alt="screencapture-localhost-3000-2026-05-11-18_17_33" src="https://github.com/user-attachments/assets/df10f5e7-43c0-4c40-9f5d-1acd3f83a533" />
+
 
 ## 🛠️ Tech Stack
 
