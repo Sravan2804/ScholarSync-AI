@@ -7,6 +7,8 @@
 
 **ScholarSync AI** is a high-performance research orchestration platform that deploys a decentralized swarm of specialized AI agents to automate the academic research lifecycle. From strategic planning and global data scouting to authority validation and cognitive synthesis, ScholarSync transforms complex inquiries into structured, peer-validated research blueprints.
 
+<<<<<<< HEAD
+
 ## 🔄 Agentic Workflow
 
 ScholarSync AI employs a strictly sequenced multi-agent orchestration pipeline. Each agent is specialized for a specific phase of the research lifecycle, ensuring high-fidelity outputs and peer-validated accuracy.
