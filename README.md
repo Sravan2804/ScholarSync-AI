@@ -26,6 +26,11 @@ graph LR
     style Validator fill:#ec4899,stroke:#fff,stroke-width:2px,color:#fff
     style Synthesizer fill:#06b6d4,stroke:#fff,stroke-width:2px,color:#fff
 ```
+<<<<<<< HEAD
+=======
+<img width="1898" height="947" alt="image" src="https://github.com/user-attachments/assets/78d0cfd8-1311-4821-8652-1087c24d5738" />
+
+>>>>>>> 62a5afaf925b65f50da751fb447fae68766a69f7
 
 ## 🔬 Core Architecture: The Research Swarm
 
